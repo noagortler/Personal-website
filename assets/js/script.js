@@ -33,3 +33,35 @@ backToTopButton.addEventListener("click", function () {
     behavior: "smooth"
   });
 });
+
+// Section Nav Interactivity
+
+let sectionLinks = document.querySelectorAll(".section-link");
+
+// Smooth Scroll 
+
+for (let i = 0; i < sectionLinks.length; i++) {
+  sectionLinks[i].addEventListener("click", function (event) {
+    event.preventDefault();
+
+    let targetSection = document.querySelector(sectionLinks[i].getAttribute("href"))
+
+    if (targetSection) {
+      targetSection.scrollIntoView({ behavior: "smooth" });
+    }
+  })
+}
+
+// Highlight active section on scroll
+window.addEventListener("scroll", function () {
+  for (let i = 0; i < sectionLinks.length; i++) {
+    let targetSection = document.querySelector(sectionLinks[i].getAttribute("href"));
+    let box = targetSection.getBoundingClientRect();
+
+    if (box.top <= 150 && box.bottom >= 150) {
+      sectionLinks[i].classList.add("active");
+    } else {
+      sectionLinks[i].classList.remove("active");
+    }
+  }
+});

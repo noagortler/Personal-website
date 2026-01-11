@@ -1,6 +1,6 @@
 /* Body Styling */
 
-html{
+html {
     font-size: 10px;
 }
 
@@ -9,18 +9,18 @@ html{
     padding-right: 0;
 }
 
-body{
+body {
     margin: 0;
     background-color: #111143;
-    background: linear-gradient(100deg,#0C0C31 0%, #151536 70%, #393D61 100%);
+    background: linear-gradient(100deg, #0C0C31 0%, #151536 70%, #393D61 100%);
     color: white;
 
 }
 
 /* Body Styling - Light */
 
-body.theme-light{
-    background: linear-gradient(100deg,#D7E0FF 0%, #E6ECFF 85%, #EFF3FF 100%);
+body.theme-light {
+    background: linear-gradient(100deg, #D7E0FF 0%, #E6ECFF 85%, #EFF3FF 100%);
     color: #0B1020;
 }
 
@@ -37,90 +37,177 @@ body.theme-light{
 }
 
 /* Sidebar Styling - Light */
-body.theme-light #sidebar{
+body.theme-light #sidebar {
     background-color: #D7E0FF;
     box-shadow: 80px 0 50px #D7E0FF;
 }
 
 /* Sidebar Text */
 
-#sidebar h1{
+#sidebar h1 {
     color: #9CADD7;
     font-size: calc(1.7vw + 1.75vh);
     font-weight: 700;
 }
 
-#sidebar h2{
+#sidebar h2 {
     font-size: calc(1vw + 1vh);
 }
 
-#sidebar p{
+#sidebar p {
     font-size: calc(.7vw + .7vh);
     padding: 10% 0;
 }
 
-#sidebar a{
-    font-size:calc(.6vw + .6vh);
+#sidebar a {
+    font-size: calc(.6vw + .6vh);
     text-decoration: none;
     font-weight: 650;
     color: white;
 }
 
 /* Sidebar Text - Light */
-body.theme-light #sidebar h1{
+body.theme-light #sidebar h1 {
     color: #1D2A64;
 }
 
-body.theme-light #sidebar a{
+body.theme-light #sidebar a {
     color: #0B1020;
 }
 
-/* Sidebar List/Button Styling */
+/* Contact Nav Styling */
 
-#sidebar ul{
+.contact-nav ul {
     padding-left: 0%;
     padding-right: 10%;
 }
-#sidebar li{
+
+.contact-nav li {
     list-style-type: none;
     background-color: #232E6F;
     padding: 2% 4%;
     margin: 1.5%;
-    border-radius:15px;
+    border-radius: 15px;
     transition: transform .15s ease, box-shadow .15s ease;
 }
 
-#sidebar li:hover{
+.contact-nav li:hover {
     box-shadow: 0 .5px 15px #356176;
 }
 
-/* Sidebar List/Button Styling - Light */
+/* Contact Nav Styling - Light */
 
-body.theme-light #sidebar li{
+body.theme-light .contact-nav li {
     background-color: #B9C5E5;
 }
 
-body.theme-light #sidebar li:hover{
+body.theme-light .contact-nav li:hover {
     box-shadow: 0 .5px 15px #0B1020;
 }
 
+/* Section Nav Styling */
+
+.section-nav {
+    margin-top: 5rem;
+}
+
+.section-nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.section-nav li {
+    padding: 0;
+    margin: 0.8rem 0;
+}
+
+/* Section Nav Text */
+
+.nav-text {
+    letter-spacing: 0.08em;
+    font-size: 1.3rem;
+    font-weight: 650;
+}
+
+/* Section Nav Link*/
+.section-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 1rem;
+    width: fit-content;
+    text-decoration: none;
+    color: white;
+    opacity: 0.85;
+    padding: 0.4rem 0;
+}
+
+.section-link:hover {
+    opacity: 1;
+}
+
+/* Section Nav Line */
+
+.nav-line {
+    height: 2px;
+    width: 24px;
+    background: rgba(255, 255, 255, 0.35);
+    transition: width 0.2s ease, background-color 0.2s ease;
+}
+
+.section-link:hover .nav-line {
+    width: 40px;
+}
+
+/* Active Section Line Styling*/
+
+.section-link.active {
+    opacity: 1;
+}
+
+.section-link.active .nav-line {
+    width: 56px;
+    background: #9CADD7;
+}
+
+.section-link.active .nav-text {
+    color: #9CADD7;
+}
+
+/* Section Nav - Light */
+
+body.theme-light .section-link{
+  color: #0B1020;
+}
+
+body.theme-light .nav-line{
+  background: rgba(11, 16, 32, 0.35);
+}
+
+body.theme-light .section-link.active .nav-line{
+  background: #1D2A64;
+}
+
+body.theme-light .section-link.active .nav-text{
+  color: #1D2A64;
+}
 
 /* Dark/Light Theme Toggle Styling*/
 
-#theme-toggle{
+#theme-toggle {
     display: inline-flex;
     align-items: center;
     padding-left: 7%;
 }
 
-.theme-switch{
+.theme-switch {
     position: relative;
     display: inline-block;
     width: 9.6rem;
     height: 3.2rem;
 }
 
-#theme-switch{
+#theme-switch {
     opacity: 0;
     width: 0;
     height: 0;
@@ -128,7 +215,7 @@ body.theme-light #sidebar li:hover{
 
 /* Slider */
 
-.slider{
+.slider {
     position: absolute;
     inset: 0;
     background-color: #232E6F;
@@ -136,7 +223,7 @@ body.theme-light #sidebar li:hover{
     cursor: pointer;
 }
 
-.theme-text{
+.theme-text {
     position: absolute;
     top: 50%;
     right: 1.2rem;
@@ -149,7 +236,7 @@ body.theme-light #sidebar li:hover{
 }
 
 /* Knob */
-.knob{
+.knob {
     position: absolute;
     width: 2.4rem;
     height: 2.4rem;
@@ -162,11 +249,11 @@ body.theme-light #sidebar li:hover{
 }
 
 /* Theme Switch Positioning */
-#theme-switch:checked + .slider .knob{
+#theme-switch:checked+.slider .knob {
     transform: translateY(-50%) translateX(6.4rem);
 }
 
-#theme-switch:checked + .slider .theme-text{
+#theme-switch:checked+.slider .theme-text {
     left: 1.2rem;
     right: auto;
 }
@@ -174,16 +261,16 @@ body.theme-light #sidebar li:hover{
 /* Dark/Light Theme Toggle Styling - Light*/
 
 /* Slider */
-body.theme-light .slider{
+body.theme-light .slider {
     background-color: #B9C5E5;
 }
 
-body.theme-light .theme-text{
+body.theme-light .theme-text {
     color: #0B1020;
 }
 
 /* Knob */
-body.theme-light .knob{
+body.theme-light .knob {
     background-color: #232E6F;
 }
 
@@ -208,35 +295,35 @@ body.theme-light .knob{
 
 /* Main Content Text */
 
-#main-content h2{
+#main-content h2 {
     color: #9CADD7;
     font-size: 3rem;
     font-weight: 700;
     padding-bottom: 5%;
 }
 
-#main-content strong{
+#main-content strong {
     color: #DCD4CB;
     padding-bottom: 3%;
 }
 
-#main-content p{
+#main-content p {
     padding-bottom: 2%;
 }
 
 /* Main Content Text - Light */
 
-body.theme-light #main-content h2{
+body.theme-light #main-content h2 {
     color: #1D2A64;
 }
 
-body.theme-light #main-content strong{
+body.theme-light #main-content strong {
     color: #232E6F;
 }
 
 /* Card Styling */
 
-.project-card{
+.project-card {
     color: white;
     border-radius: 15px;
     padding: 2rem;
@@ -250,31 +337,32 @@ body.theme-light #main-content strong{
     transition: transform .15s ease, box-shadow .15s ease;
 }
 
-.project-card:hover{
+.project-card:hover {
     box-shadow: 0 .5px 15px #9CADD7;
 }
-.project-img{
+
+.project-img {
     width: 100%;
     height: auto;
-    margin-bottom:1.5rem;
-    border-radius:15px;
+    margin-bottom: 1.5rem;
+    border-radius: 15px;
 }
 
 /* Card Styling - Light */
 
 /* Light theme overrides for project cards */
-body.theme-light .project-card{
+body.theme-light .project-card {
     background-color: #D2DAEE;
     color: #0B1020;
 }
 
-body.theme-light .project-card:hover{
+body.theme-light .project-card:hover {
     box-shadow: 0 .5px 15px rgba(29, 42, 100, 0.18);
 }
 
 /* Back To Top Buttn Styling (Hidden) */
 
-#back-to-top{
+#back-to-top {
     position: fixed;
     right: 2rem;
     bottom: 2rem;
@@ -292,21 +380,21 @@ body.theme-light .project-card:hover{
     transition: opacity 0.2s ease, transform 0.2s ease;
 }
 
-#back-to-top:hover{
+#back-to-top:hover {
     box-shadow: 0 .5px 15px #9CADD7;
 }
 
 
 /* Back To Top Button (Visible) */
 
-#back-to-top.show{
+#back-to-top.show {
     opacity: 1;
     pointer-events: auto;
     transform: translateY(0);
 }
 
 /* Footer */
-footer{
+footer {
     text-align: right;
     padding-right: 7%;
 }
@@ -342,15 +430,15 @@ footer{
 
 @media (max-width: 991.98px) {
 
-    body{
-        background: linear-gradient(145deg,#151536 30%, #393D61 100%);
+    body {
+        background: linear-gradient(145deg, #151536 30%, #393D61 100%);
     }
 
     #sidebar {
         padding: 1.6rem 5rem;
         align-items: flex-start;
         box-shadow: 0 40px 80px #080826;
-        text-align:center;
+        text-align: center;
     }
 
     #sidebar h1 {
@@ -366,7 +454,7 @@ footer{
     #sidebar p {
         font-size: 1.2rem;
         padding: 0;
-        margin:1.4rem;
+        margin: 1.4rem;
     }
 
     #sidebar ul {
@@ -384,13 +472,17 @@ footer{
         margin-top: 1.4rem;
     }
 
-    #sidebar a{
+    #sidebar a {
         font-size: 1.2rem;
     }
 
-    #theme-toggle{
+    #theme-toggle {
         position: absolute;
         top: 1.4rem;
         right: 5%;
+    }
+
+    .section-nav{
+        display: none;
     }
 }
