@@ -1,3 +1,5 @@
+/* Body Styling */
+
 html{
     font-size: 10px;
 }
@@ -15,15 +17,29 @@ body{
 
 }
 
+/* Body Styling - Light */
+
+body.theme-light{
+    background: linear-gradient(100deg,#D7E0FF 0%, #E6ECFF 85%, #EFF3FF 100%);
+    color: #0B1020;
+}
+
+
 /* Sidebar Styling */
 
 #sidebar {
-    position: static;
+    position: relative;
     width: 100%;
     height: 35vh;
     padding: 5%;
     background-color: #0C0C31;
     box-shadow: 80px 0 50px #0C0C31;
+}
+
+/* Sidebar Styling - Light */
+body.theme-light #sidebar{
+    background-color: #D7E0FF;
+    box-shadow: 80px 0 50px #D7E0FF;
 }
 
 /* Sidebar Text */
@@ -50,6 +66,15 @@ body{
     color: white;
 }
 
+/* Sidebar Text - Light */
+body.theme-light #sidebar h1{
+    color: #1D2A64;
+}
+
+body.theme-light #sidebar a{
+    color: #0B1020;
+}
+
 /* Sidebar List/Button Styling */
 
 #sidebar ul{
@@ -68,6 +93,100 @@ body{
 #sidebar li:hover{
     box-shadow: 0 .5px 15px #356176;
 }
+
+/* Sidebar List/Button Styling - Light */
+
+body.theme-light #sidebar li{
+    background-color: #B9C5E5;
+}
+
+body.theme-light #sidebar li:hover{
+    box-shadow: 0 .5px 15px #0B1020;
+}
+
+
+/* Dark/Light Theme Toggle Styling*/
+
+#theme-toggle{
+    display: inline-flex;
+    align-items: center;
+    padding-left: 7%;
+}
+
+.theme-switch{
+    position: relative;
+    display: inline-block;
+    width: 9.6rem;
+    height: 3.2rem;
+}
+
+#theme-switch{
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+/* Slider */
+
+.slider{
+    position: absolute;
+    inset: 0;
+    background-color: #232E6F;
+    border-radius: 999px;
+    cursor: pointer;
+}
+
+.theme-text{
+    position: absolute;
+    top: 50%;
+    right: 1.2rem;
+    transform: translateY(-50%);
+    font-size: 1.4rem;
+    font-weight: 500;
+    color: white;
+    user-select: none;
+    transition: all 0.2s;
+}
+
+/* Knob */
+.knob{
+    position: absolute;
+    width: 2.4rem;
+    height: 2.4rem;
+    left: 0.4rem;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: #A6B6DE;
+    border-radius: 50%;
+    transition: transform 0.2s;
+}
+
+/* Theme Switch Positioning */
+#theme-switch:checked + .slider .knob{
+    transform: translateY(-50%) translateX(6.4rem);
+}
+
+#theme-switch:checked + .slider .theme-text{
+    left: 1.2rem;
+    right: auto;
+}
+
+/* Dark/Light Theme Toggle Styling - Light*/
+
+/* Slider */
+body.theme-light .slider{
+    background-color: #B9C5E5;
+}
+
+body.theme-light .theme-text{
+    color: #0B1020;
+}
+
+/* Knob */
+body.theme-light .knob{
+    background-color: #232E6F;
+}
+
 
 /* Main Content Styling */
 
@@ -105,6 +224,16 @@ body{
     padding-bottom: 2%;
 }
 
+/* Main Content Text - Light */
+
+body.theme-light #main-content h2{
+    color: #1D2A64;
+}
+
+body.theme-light #main-content strong{
+    color: #232E6F;
+}
+
 /* Card Styling */
 
 .project-card{
@@ -112,7 +241,7 @@ body{
     border-radius: 15px;
     padding: 2rem;
     text-align: center;
-    background-color: #232E6F;
+    background-color: #0A0A2A;
     border: none;
     display: flex;
     flex-direction: column;
@@ -131,8 +260,55 @@ body{
     border-radius:15px;
 }
 
+/* Card Styling - Light */
+
+/* Light theme overrides for project cards */
+body.theme-light .project-card{
+    background-color: #D2DAEE;
+    color: #0B1020;
+}
+
+body.theme-light .project-card:hover{
+    box-shadow: 0 .5px 15px rgba(29, 42, 100, 0.18);
+}
+
+/* Back To Top Buttn Styling (Hidden) */
+
+#back-to-top{
+    position: fixed;
+    right: 2rem;
+    bottom: 2rem;
+    width: 4rem;
+    height: 4rem;
+    border: none;
+    border-radius: 50%;
+    background-color: #9CADD7;
+    color: #0C0C31;
+    font-size: 1.6rem;
+    font-weight: bold;
+    cursor: pointer;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.2s ease, transform 0.2s ease;
+}
+
+#back-to-top:hover{
+    box-shadow: 0 .5px 15px #9CADD7;
+}
+
+
+/* Back To Top Button (Visible) */
+
+#back-to-top.show{
+    opacity: 1;
+    pointer-events: auto;
+    transform: translateY(0);
+}
+
+/* Footer */
 footer{
     text-align: right;
+    padding-right: 7%;
 }
 
 /* >= Large Screen Media Queries */
@@ -152,7 +328,13 @@ footer{
     }
 
     .content-section {
-    min-height: 100vh;
+        min-height: 100vh;
+    }
+
+    #theme-toggle {
+        position: absolute;
+        left: 5%;
+        bottom: 2.2rem;
     }
 }
 
@@ -161,7 +343,7 @@ footer{
 @media (max-width: 991.98px) {
 
     body{
-    background: linear-gradient(145deg,#151536 30%, #393D61 100%);
+        background: linear-gradient(145deg,#151536 30%, #393D61 100%);
     }
 
     #sidebar {
@@ -204,5 +386,11 @@ footer{
 
     #sidebar a{
         font-size: 1.2rem;
+    }
+
+    #theme-toggle{
+        position: absolute;
+        top: 1.4rem;
+        right: 5%;
     }
 }
