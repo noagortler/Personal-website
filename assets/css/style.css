@@ -78,8 +78,9 @@ body.theme-light #sidebar a {
 /* Contact Nav Styling */
 
 .contact-nav ul {
-    gap: 2rem;
-    padding-left: 0%;
+    gap: 1rem;
+    padding-left: 0;
+    margin: 0;
 }
 
 .contact-nav li {
@@ -93,6 +94,10 @@ body.theme-light #sidebar a {
 
 .contact-nav li:hover {
     box-shadow: 0 .5px 15px #356176;
+}
+
+.contact-nav a.btn {
+    white-space: nowrap;
 }
 
 /* Contact Nav Styling - Light */
@@ -176,20 +181,20 @@ body.theme-light .contact-nav li:hover {
 
 /* Section Nav - Light */
 
-body.theme-light .section-link{
-  color: #0B1020;
+body.theme-light .section-link {
+    color: #0B1020;
 }
 
-body.theme-light .nav-line{
-  background: rgba(11, 16, 32, 0.35);
+body.theme-light .nav-line {
+    background: rgba(11, 16, 32, 0.35);
 }
 
-body.theme-light .section-link.active .nav-line{
-  background: #1D2A64;
+body.theme-light .section-link.active .nav-line {
+    background: #1D2A64;
 }
 
-body.theme-light .section-link.active .nav-text{
-  color: #1D2A64;
+body.theme-light .section-link.active .nav-text {
+    color: #1D2A64;
 }
 
 /* Dark/Light Theme Toggle Styling*/
@@ -422,7 +427,7 @@ footer {
     #theme-toggle {
         position: absolute;
         left: 5%;
-        top: 2.2rem;
+        top: 2.5rem;
     }
 }
 
@@ -481,13 +486,20 @@ footer {
         font-size: 1.2rem;
     }
 
+    .contact-nav ul {
+        justify-content: center;
+        row-gap: 0.8rem;
+    }
+
     #theme-toggle {
         position: absolute;
         top: 1.4rem;
         right: 5%;
     }
 
-    .section-nav{
+    .section-nav {
         display: none;
     }
 }
+
+@media (max-width: 707px) {}
