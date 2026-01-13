@@ -1,44 +1,13 @@
-# Personal Portfolio Website
-## Overview
-This project is a responsive personal portfolio website built using **HTML, CSS, Bootstrap, and JavaScript**. The goal of the assignment was to apply JavaScript concepts to an existing HTML/CSS project in a way that enhances usability and interactivity.
-The site showcases basic information about me and my experience, while incorporating simple but effective JavaScript-driven features.
----
-## Technologies Used
-- **HTML** – page structure and content  
-- **CSS** – custom styling, layout, and responsive design  
-- **Bootstrap 5** – layout utilities and responsive helpers  
-- **JavaScript** – interactivity and UI behavior  
----
-## JS Features
-### Dark / Light Mode Toggle
-- Users can switch between dark and light themes using a toggle in the sidebar.
-- JavaScript listens for changes on a checkbox input and adds or removes a CSS class on the `<body>` element.
-- Theme changes background colors, text colors, and card styling.
-### Section Navigation with Active Highlight
-- A section navigation menu allows users to jump to different sections of the page.
-- Clicking a section link smoothly scrolls to the selected section.
-- The currently visible section is highlighted in the navigation.
-### Back to Top Button
-- A “Back to Top” button appears once the user scrolls 400px down the page.
-- Clicking the button smoothly scrolls the page back to the top.
-- Button visibility is controlled using JavaScript and CSS classes.
+# Interactive Website Reflection
 
----
-## JavaScript Focus
-The JavaScript in this project was intentionally kept simple, focusing on:
-- `querySelector` and `getElementById`
-- `addEventListener`
-- conditionals (`if / else`)
-- class manipulation (`classList.add` / `classList.remove`)
-- timing logic (`setTimeout`)
-- scroll position detection using `getBoundingClientRect()`
----
-## Challenges and Learning Outcomes
-- JavaScript proved more challenging than HTML and CSS due to its logical structure.
-- Debugging interactive behaviors helped strengthen my understanding of how JavaScript responds to user actions and browser events.
-- This project improved my confidence in combining HTML, CSS, and JavaScript to create interactive user experiences.
----
-## Future Improvements
-- Expand project sections adding in my projects
-- Improve colour contrast for visibility
-- Continue to implement simple and impactful JavaScript
+I found the JavaScript unit to be far more challenging than HTML and CSS, which makes sense given how much more complex it is. Compared to the HTML and CSS, JavaScript introduces logic and conditions which required me to think about my code in a completely different way. For me, the added difficulty meant that I needed to spend far more time trying to understand the concepts before attempting to apply them.
+
+Up until this point in my education, my approach has always been comprehension first and application second. That is exactly how I approached this unit. I spent many hours reviewing my class notes, rewatching lectures, and doing deep dives online to read about the concepts we covered. Despite all of that effort, it still didn’t feel like JavaScript was clicking for me. If I’m being completely honest, this led me to put off starting the assignment longer than I should have. I didn’t feel ready, and I couldn’t understand why the material wasn’t sinking in.
+
+What I eventually realized was that the missing piece wasn’t more reading and studying, it was hands on practice. Although it’s often emphasized in class that we should be practicing constantly, the idea of applying concepts before fully understanding them felt very unfamiliar and uncomfortable to me. The jump in difficulty from HTML and CSS, combined with my old study habits, resulted in me spending too much time reviewing information and not enough time practicing. This disconnect was by far my biggest challenge during the assignment. Once I finally began working on my project, things began to make much more sense. Seeing how the JavaScript actually affected my website helped solidify concepts that felt abstract when I was only reading about them. This shift in approach was an important realization for me and something I know I will carry forward into future units.
+
+For this assignment, my goal was to add JavaScript that was simple yet impactful. Because my site is fairly simple, it wasn’t immediately obvious what features to add. I decided to start with a dark/light mode toggle, which was suggested in class. Funny enough, I went for a dark theme in my first assignment because I turn the dark mode on whenever it is available. Providing the users of my site with this feature was one of the reasons this ended up being my favorite addition to the site. Not only did it improve the user experience, but it also gave me the opportunity to work with event listeners, class toggling, and conditional logic in a way that felt meaningful.
+
+Beyond the dark/light mode toggle, I added interactive navigation behavior such as smooth scrolling and highlighting the active section while scrolling. While these features required troubleshooting, successfully implementing them felt like a major win. There are still refinements I would like to make, but overall I’m proud of how much functionality I was able to add using JavaScript. More importantly, this assignment helped me shift my mindset toward learning by building, which has already made me feel more confident moving forward.
+
+In addition to JavaScript itself, I also faced challenges using GitHub effectively. Managing commits, resolving errors, and understanding how Git tracks changes was initially confusing. However, working through these issues helped me better understand version control and the importance of committing changes incrementally. There were many takeaways using Git, but I will sum it up by stating I will never type “git commit index.html” instead of “git add index.html” ever again.
