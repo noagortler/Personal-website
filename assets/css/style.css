@@ -324,6 +324,31 @@ body.theme-light #main-content strong {
     color: #232E6F;
 }
 
+/* Skill Tags */
+
+.skill-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    margin-top: 1.5rem;
+}
+
+.skill-tag {
+    background-color: #232E6F;
+    color: #9CADD7;
+    padding: 0.5rem 1.4rem;
+    border-radius: 999px;
+    font-size: 1.3rem;
+    font-weight: 500;
+}
+
+/* Skill Tags - Light */
+
+body.theme-light .skill-tag {
+    background-color: #8A9DCC;
+    color: white;
+}
+
 /* Card Styling */
 
 .project-card {
