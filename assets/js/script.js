@@ -65,3 +65,20 @@ window.addEventListener("scroll", function () {
     }
   }
 });
+// Fade-in On Scroll
+
+let fadeEls = document.querySelectorAll(".fade-in");
+
+let fadeObserver = new IntersectionObserver(function (entries) {
+    for (let i = 0; i < entries.length; i++) {
+        if (entries[i].isIntersecting) {
+            entries[i].target.classList.add("visible");
+        } else {
+            entries[i].target.classList.remove("visible");
+        }
+    }
+}, { threshold: 0.15 });
+
+for (let i = 0; i < fadeEls.length; i++) {
+    fadeObserver.observe(fadeEls[i]);
+}
