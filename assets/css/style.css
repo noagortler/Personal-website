@@ -14,13 +14,13 @@ body {
     background-color: #111143;
     background: linear-gradient(100deg, #0C0C31 0%, #151536 70%, #393D61 100%);
     color: white;
-
+    transition: background 1s ease, color 1s ease;
 }
 
 /* Body Styling - Light */
 
 body.theme-light {
-    background: linear-gradient(100deg, #D7E0FF 0%, #E6ECFF 85%, #EFF3FF 100%);
+    background: linear-gradient(100deg, #B8C6E8 0%, #C9D4F0 70%, #8A9BC7 100%);
     color: #0B1020;
 }
 
@@ -32,15 +32,9 @@ body.theme-light {
     width: 100%;
     height: 35vh;
     padding: 5%;
-    background-color: #0C0C31;
-    box-shadow: 80px 0 50px #0C0C31;
 }
 
 /* Sidebar Styling - Light */
-body.theme-light #sidebar {
-    background-color: #D7E0FF;
-    box-shadow: 80px 0 50px #D7E0FF;
-}
 
 /* Sidebar Text */
 
@@ -88,7 +82,7 @@ body.theme-light #sidebar a {
     background-color: #232E6F;
     padding: 2% 4%;
     margin: 0;
-    border-radius: 15px;
+    border-radius: 999px;
     transition: transform .15s ease, box-shadow .15s ease;
 }
 
@@ -103,7 +97,11 @@ body.theme-light #sidebar a {
 /* Contact Nav Styling - Light */
 
 body.theme-light .contact-nav li {
-    background-color: #B9C5E5;
+    background-color: #8A9DCC;
+}
+
+body.theme-light .contact-nav a {
+    color: white;
 }
 
 body.theme-light .contact-nav li:hover {
@@ -267,7 +265,7 @@ body.theme-light .section-link.active .nav-text {
 
 /* Slider */
 body.theme-light .slider {
-    background-color: #B9C5E5;
+    background-color: #8A9DCC;
 }
 
 body.theme-light .theme-text {
@@ -276,7 +274,7 @@ body.theme-light .theme-text {
 
 /* Knob */
 body.theme-light .knob {
-    background-color: #232E6F;
+    background-color: #3A4D86;
 }
 
 
@@ -355,7 +353,6 @@ body.theme-light #main-content strong {
 
 /* Card Styling - Light */
 
-/* Light theme overrides for project cards */
 body.theme-light .project-card {
     background-color: #D2DAEE;
     color: #0B1020;
@@ -365,7 +362,7 @@ body.theme-light .project-card:hover {
     box-shadow: 0 .5px 15px rgba(29, 42, 100, 0.18);
 }
 
-/* Back To Top Buttn Styling (Hidden) */
+/* Back To Top Button Styling (Hidden) */
 
 #back-to-top {
     position: fixed;
@@ -389,7 +386,14 @@ body.theme-light .project-card:hover {
     box-shadow: 0 .5px 15px #9CADD7;
 }
 
+body.theme-light #back-to-top {
+    background-color: #6B7DB5;
+    color: #0C0C31;
+}
 
+body.theme-light #back-to-top:hover {
+    box-shadow: 0 .5px 15px #1D2A64;
+}
 /* Back To Top Button (Visible) */
 
 #back-to-top.show {
@@ -441,7 +445,6 @@ footer {
 
     #sidebar {
         padding: 1.6rem 5rem;
-        box-shadow: 0 40px 80px #080826;
         display: flex;
         flex-direction: column;
         align-items: center;
